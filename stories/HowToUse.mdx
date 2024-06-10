@@ -1,0 +1,35 @@
+import { Meta } from "@storybook/blocks";
+import design from '@sebastienbarbier/design-system';
+
+<Meta title="How to use" />
+
+# How to use
+
+## Javascript 
+
+Install the npm package within your project
+```sh
+npm install @sebastienbarbier/design-system
+```
+
+Full system can be accessed as object within your javascript file
+```jsx
+import design from '@sebastienbarbier/design-system';
+```
+
+Design is a `json` object which contains the following keys:
+
+<code><pre style={{ fontSize: '0.8em' }}>
+{ JSON.stringify(design, null, 2) }
+</pre></code>
+
+## SCSS
+
+Within you scss project, you can use the following SCSS line to load all variables.
+```scss
+@use "@sebastienbarbier/design-system";
+
+.body {
+    background: var(--sys-color-background);
+}
+```

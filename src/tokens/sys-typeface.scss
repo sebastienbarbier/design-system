@@ -1,0 +1,9 @@
+@use 'sass:list';
+
+@function values() {
+  @return (
+     // background color
+    'serif': ('Source Serif Variable', 'Source Serif'),
+    'sans': ('Open Sans Variable', 'Open Sans'),
+  );
+}

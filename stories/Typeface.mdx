@@ -1,0 +1,74 @@
+import { Meta } from "@storybook/blocks";
+import design from '@sebastienbarbier/design-system';
+
+import '@sebastienbarbier/design-system/fonts.css';
+
+<Meta title="Design System/Typefaces" />
+
+# Typefaces
+
+<div style={{ paddingBottom: '30px' }}>
+<code><pre style={{ fontSize: '0.8em' }}>
+{` 
+import design from '@sebastienbarbier/design-system';
+
+${JSON.stringify({
+  sys: {
+    typeface: design.sys.typeface
+  }
+}, null, 2)}
+`}
+</pre></code>
+</div>
+
+## Samples
+
+<h1 className="serif">{design.sys.typeface.serif}</h1>
+<h2 className="serif">{design.sys.typeface.serif}</h2>
+<h3 className="serif">{design.sys.typeface.serif}</h3>
+<h4 className="serif">{design.sys.typeface.serif}</h4>
+<h5 className="serif">{design.sys.typeface.serif}</h5>
+<h6 className="serif">{design.sys.typeface.serif}</h6>
+
+Source: {design.sys.typeface.serif}
+
+<h1 className="sans">{design.sys.typeface.sans}</h1>
+<h2 className="sans">{design.sys.typeface.sans}</h2>
+<h3 className="sans">{design.sys.typeface.sans}</h3>
+<h4 className="sans">{design.sys.typeface.sans}</h4>
+<h5 className="sans">{design.sys.typeface.sans}</h5>
+<h6 className="sans">{design.sys.typeface.sans}</h6>
+
+Source: {design.sys.typeface.sans}
+
+<style>
+  {`
+  .serif, .sans {
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .serif {
+    font-family: ${design.sys.typeface.serif} !important;
+  }
+  .sans {
+    font-family: ${design.sys.typeface.sans} !important;
+  }
+  `}
+</style>
+
+## Add fonts reference within your projects
+
+### Load local fonts
+
+You can load the design system typefaces by importing the `fonts.css` file.
+
+```jsx
+import '@sebastienbarbier/design-system/fonts.css';
+```
+
+### Load fonts from CDN
+
+[https://fonts.google.com/specimen/Source+Serif+4](https://fonts.google.com/specimen/Source+Serif+4)
+
+[https://fonts.google.com/specimen/Open+Sans?query=Open+sans](https://fonts.google.com/specimen/Open+Sans?query=Open+sans)

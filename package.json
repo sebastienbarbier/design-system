@@ -1,0 +1,42 @@
+{
+  "name": "@sebastienbarbier/design-system",
+  "version": "0.1.0",
+  "description": "sebastienbarbier design system package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebastienbarbier/design-system.git"
+  },
+  "keywords": [
+    "design",
+    "system",
+    "package",
+    "dsp"
+  ],
+  "author": "Sébastien Barbier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sebastienbarbier/design-system/issues"
+  },
+  "homepage": "https://github.com/sebastienbarbier/design-system#readme",
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.5.0",
+    "@storybook/addon-essentials": "^8.1.5",
+    "@storybook/addon-interactions": "^8.1.5",
+    "@storybook/addon-links": "^8.1.5",
+    "@storybook/blocks": "^8.1.5",
+    "@storybook/html": "^8.1.5",
+    "@storybook/html-vite": "^8.1.5",
+    "@storybook/test": "^8.1.5",
+    "sass": "^1.77.4",
+    "storybook": "^8.1.5"
+  },
+  "dependencies": {
+    "@storybook/addon-styling": "^1.3.7"
+  }
+}

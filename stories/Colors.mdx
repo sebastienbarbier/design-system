@@ -1,0 +1,26 @@
+import { Meta } from "@storybook/blocks";
+import design from '@sebastienbarbier/design-system';
+import Palette from './components/Palette';
+
+<Meta title="Design System/Colors" />
+
+# Colors
+
+This design system is based on a palette of colors that are used to create a consistent visual language across the application. The colors are divided into three categories: System, Palette, and Gradients.
+
+## System
+
+<Palette large obj={design.sys.color} filter={(key) => { return true }} />
+
+## References
+
+<Palette obj={design.ref.palette} filter={(key) => !key.startsWith('beige-') && !key.startsWith('brown-') && !key.startsWith('gold-')} />
+
+### Gold
+<Palette obj={design.ref.palette} filter={(key) => key.startsWith('gold-')} />
+
+### Beige
+<Palette obj={design.ref.palette} filter={(key) => key.startsWith('beige-')} />
+
+### Brown
+<Palette obj={design.ref.palette} filter={(key) => key.startsWith('brown-')} />
