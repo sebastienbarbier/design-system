@@ -22,4 +22,5 @@ See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog
 -->
 ## [0.1.0] - 2024-MM-DD
 ### ✨ Feature
--  Add Storybook documentation (#1)
+- Deploy storybook to github.io (#2) 
+- Add Storybook documentation (#1)
