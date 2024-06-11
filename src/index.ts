@@ -1,3 +1,5 @@
+// import 'vite/modulepreload-polyfill'
+
 import * as refPalette from './tokens/ref-palette.module.scss';
 import * as sysColor from './tokens/sys-color.module.scss';
 import * as sysTypeface from './tokens/sys-typeface.module.scss';
