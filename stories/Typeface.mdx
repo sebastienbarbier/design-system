@@ -63,12 +63,20 @@ Source: {design.sys.typeface.sans}
 
 You can load the design system typefaces by importing the `fonts.css` file.
 
-```jsx
-import '@sebastienbarbier/design-system/fonts.css';
+```scss
+@import "../node_modules/@sebastienbarbier/design-system/dist/fonts.css";
 ```
+
+This will include web fonts within your repository as self hosted. An alternative solution could be to load them from a CDN.
 
 ### Load fonts from CDN
 
-[https://fonts.google.com/specimen/Source+Serif+4](https://fonts.google.com/specimen/Source+Serif+4)
+#### Google fonts
 
+[https://fonts.google.com/specimen/Source+Serif+4](https://fonts.google.com/specimen/Source+Serif+4)  
 [https://fonts.google.com/specimen/Open+Sans?query=Open+sans](https://fonts.google.com/specimen/Open+Sans?query=Open+sans)
+
+#### Abobe fonts
+
+[https://fonts.adobe.com/fonts/source-serif-4](https://fonts.adobe.com/fonts/source-serif-4)  
+[https://fonts.adobe.com/fonts/open-sans](https://fonts.adobe.com/fonts/open-sans)

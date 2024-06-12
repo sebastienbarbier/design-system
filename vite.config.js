@@ -2,6 +2,7 @@
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 export default defineConfig({
   build: {
@@ -28,6 +29,16 @@ export default defineConfig({
       },
     },
   },
-  plugins: [dts()]
+  plugins: [
+    dts(),
+    viteStaticCopy({
+      targets: [
+        {
+          src: 'src/fonts.css',
+          dest: ''
+        }
+      ]
+    })
+  ]
   // publicDir: 'assets',
 })
