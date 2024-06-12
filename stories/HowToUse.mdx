@@ -39,6 +39,7 @@ Within you scss project, you can use the following SCSS line to load all variabl
 {
 [...getComputedStyle(document.documentElement,null)]
     .filter(f => f.startsWith('--'))
+    .reverse()
     .map(f => <>
         <div key={f}>
             <strong>{f}</strong>: <em style={{ fontSize: '0.8em'}}>{ getComputedStyle(document.documentElement,null).getPropertyValue(f) }</em>
