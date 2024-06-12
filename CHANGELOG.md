@@ -22,5 +22,6 @@ See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog
 -->
 ## [0.1.0] - 2024-MM-DD
 ### ✨ Feature
+- Publish @sebastienbarbier/design-system to npmjs (#3)
 - Deploy storybook to github.io (#2) 
 - Add Storybook documentation (#1)

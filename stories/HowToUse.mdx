@@ -23,13 +23,25 @@ Design is a `json` object which contains the following keys:
 { JSON.stringify(design, null, 2) }
 </pre></code>
 
-## SCSS
+## Within SCSS
 
 Within you scss project, you can use the following SCSS line to load all variables.
 ```scss
-@use "@sebastienbarbier/design-system";
+@import "../node_modules/@sebastienbarbier/design-system/dist/style.css";
 
 .body {
     background: var(--sys-color-background);
 }
 ```
+
+### List of CSS variables
+
+{
+[...getComputedStyle(document.documentElement,null)]
+    .filter(f => f.startsWith('--'))
+    .map(f => <>
+        <div key={f}>
+            <strong>{f}</strong>: <em style={{ fontSize: '0.8em'}}>{ getComputedStyle(document.documentElement,null).getPropertyValue(f) }</em>
+        </div>
+    </>)
+}
