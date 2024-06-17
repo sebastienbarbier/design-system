@@ -2,8 +2,9 @@
 
 @function values() {
   @return (
-     // background color
-    'serif': ('Source Serif Variable', 'Source Serif'),
-    'sans': ('Open Sans Variable', 'Open Sans'),
+    'serif-variable': ('"Source Serif Variable"', '"Source Serif"', 'Arial', 'serif'),
+    'sans-variable': ('"Open Sans Variable"', '"Open Sans"', 'Helvetica', 'sans-serif'),
+    'serif': ('"Source Serif"', 'Arial', 'serif'),
+    'sans': ('"Open Sans"', 'Helvetica', 'sans-serif'),
   );
 }
