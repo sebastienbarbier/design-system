@@ -1,14 +1,14 @@
 import { fn } from '@storybook/test';
-import { createButton } from './Button';
-
+import { SimpleGreeting } from '../src/comp/SimpleGreeting/SimpleGreeting';
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 export default {
-  title: 'Example/Button',
+  title: 'Components/Simple Greeting',
   tags: ['autodocs'],
   render: ({ label, ...args }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
-    return createButton({ label, ...args });
+    return `<simple-greeting name='${label}'></simple-greeting>`;
+    // return createButton({ label, ...args });
   },
   argTypes: {
     backgroundColor: { control: 'color' },

@@ -1,4 +1,4 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Typeset } from "@storybook/blocks";
 import design from '@sebastienbarbier/design-system';
 
 import '@sebastienbarbier/design-system/fonts.css';
@@ -7,11 +7,48 @@ import '@sebastienbarbier/design-system/fonts.css';
 
 # Typefaces
 
+This system design defines **two typefaces**, one serif and one sans-serif. 
+
+## Serif
+
+**Font:** Source Serif  
+**Weights:** Variables, _100, 200, 300, 400, 500, 600, 700, 800, 900_  
+
+<Typeset
+  fontSizes={[14, 16, 20, 24, 28, 32, 40]}
+  fontWeight={700}
+  sampleText={design.sys.typeface.serif}
+  fontFamily={design.sys.typeface.serif}
+/>
+
+## Sans-serif
+
+**Font:** Open Sans  
+**Weights:** Variables, _100, 200, 300, 400, 500, 600, 700, 800, 900_  
+
+<Typeset
+  fontSizes={[14, 16, 20, 24, 28, 32, 40]}
+  fontWeight={700}
+  sampleText={design.sys.typeface.sans}
+  fontFamily={design.sys.typeface.sans}
+/>
+
+## Usage
+
+
+The typefaces are defined as variables and can be used within your projects.
+
+### Javascript
+
+```js
+import design from '@sebastienbarbier/design-system';
+```
+
+You can call `design.sys.typeface` to access the following values:
+
 <div style={{ paddingBottom: '30px' }}>
 <code><pre style={{ fontSize: '0.8em' }}>
-{` 
-import design from '@sebastienbarbier/design-system';
-
+{`
 ${JSON.stringify({
   sys: {
     typeface: design.sys.typeface
@@ -21,41 +58,19 @@ ${JSON.stringify({
 </pre></code>
 </div>
 
-## Samples
+### CSS
 
-<h1 className="serif">{design.sys.typeface.serif}</h1>
-<h2 className="serif">{design.sys.typeface.serif}</h2>
-<h3 className="serif">{design.sys.typeface.serif}</h3>
-<h4 className="serif">{design.sys.typeface.serif}</h4>
-<h5 className="serif">{design.sys.typeface.serif}</h5>
-<h6 className="serif">{design.sys.typeface.serif}</h6>
+Use the `var` function within your CSS/SCSS to access one of the following variables:
 
-Source: {design.sys.typeface.serif}
+```css
+--sys-typeface-serif-variable: "Source Serif Variable", "Source Serif", Arial, serif
+--sys-typeface-sans-variable: "Open Sans Variable", "Open Sans", Helvetica, sans-serif
+--sys-typeface-serif: "Source Serif", Arial, serif
+--sys-typeface-sans: "Open Sans", Helvetica, sans-serif
+```
 
-<h1 className="sans">{design.sys.typeface.sans}</h1>
-<h2 className="sans">{design.sys.typeface.sans}</h2>
-<h3 className="sans">{design.sys.typeface.sans}</h3>
-<h4 className="sans">{design.sys.typeface.sans}</h4>
-<h5 className="sans">{design.sys.typeface.sans}</h5>
-<h6 className="sans">{design.sys.typeface.sans}</h6>
 
-Source: {design.sys.typeface.sans}
 
-<style>
-  {`
-  .serif, .sans {
-    border: 0;
-    padding: 0;
-    margin: 0;
-  }
-  .serif {
-    font-family: ${design.sys.typeface.serif} !important;
-  }
-  .sans {
-    font-family: ${design.sys.typeface.sans} !important;
-  }
-  `}
-</style>
 
 ## Add fonts reference within your projects
 

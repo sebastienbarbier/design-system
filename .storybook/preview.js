@@ -5,7 +5,7 @@ const preview = {
     options: {
       storySort: {
         method: '',
-        order: ['Overview', 'Design System', ['How to use', 'Colors', 'Typefaces'], 'About this library', ['Change log', 'License']],
+        order: ['Overview', 'Design System', ['How to use', 'Colors', 'Typefaces'], 'Components', 'About this library', ['Change log', 'License']],
         locales: '',
       },
     },
@@ -17,7 +17,7 @@ const preview = {
     },
   },
 
-  tags: ['autodocs']
+  tags: ['autodocs', 'autodocs']
 };
 
 export default preview;

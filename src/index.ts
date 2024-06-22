@@ -19,3 +19,6 @@ export default {
         // TODO: add components 
     }
 }
+
+// Expose all components
+// export * from './components/index';

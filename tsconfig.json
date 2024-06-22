@@ -2,5 +2,22 @@
     "include": [
         "src/**/*.ts",
         "typings.d.ts"
-    ]
+    ],
+    "exclude": ["src/**/*.stories.ts"], // <-- this is the line we need to add
+    // "references": [{ "path": "./tsconfig.node.json" }],
+    "compilerOptions": {
+        "lib": ["es2017"],
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "forceConsistentCasingInFileNames": true,
+        "useDefineForClassFields": false
+    },
 }
