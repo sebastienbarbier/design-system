@@ -1,6 +1,6 @@
 {
   "name": "@sebastienbarbier/design-system",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "sebastienbarbier design system package",
   "type": "module",
   "main": "./dist/index.umd.cjs",
