@@ -3,17 +3,12 @@
   "version": "0.2.0",
   "description": "sebastienbarbier design system package",
   "type": "module",
-  "main": "./dist/index.umd.cjs",
-  "module": "./dist/index.js",
-  "style": "./dist/index.css",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist",
-    "CHANGELOG.md",
-    "assets/fonts"
-  ],
+  "main": "./index.js",
+  "module": "./index.js",
+  "style": "./style.css",
+  "types": "./index.d.ts",
   "scripts": {
-    "build": "vite build",
+    "build": "vite build && cp package.json dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"

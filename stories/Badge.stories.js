@@ -8,7 +8,7 @@ import '@sebastienbarbier/design-system/components/badge/badge';
  * Register the `<sb-badge>` web component using following import
  * 
  * ```js
- * import '@sebastienbarbier/design-system/dist/badge';
+ * import '@sebastienbarbier/design-system/badge';
  * ```
  * 
  * Then simply use the `<sb-badge> ... </sb-badge>` tag to display a badge within your html

@@ -40,6 +40,18 @@ export default defineConfig({
         {
           src: 'src/fonts.css',
           dest: ''
+        },
+        {
+          src: 'src/assets',
+          dest: ''
+        },
+        {
+          src: 'CHANGELOG.md',
+          dest: ''
+        },
+        {
+          src: 'README.md',
+          dest: ''
         }
       ]
     })
