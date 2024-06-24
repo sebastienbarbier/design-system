@@ -22,7 +22,6 @@ const config = {
   staticDirs: ['../assets'],
 
   async viteFinal(config) {
-    config.optimizeDeps.exclude = [...(config.optimizeDeps?.exclude ?? []), 'lit', 'lit-html']
     config.resolve.alias = {
       ...config.resolve.alias,
       '@sebastienbarbier/design-system': "../src",
