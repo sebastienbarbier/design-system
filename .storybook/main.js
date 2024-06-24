@@ -6,13 +6,12 @@ const config = {
     "../stories/**/*.mdx",
     "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
-
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
-    "@storybook/addon-mdx-gfm"
+    "@storybook/addon-mdx-gfm",
   ],
 
   framework: {
@@ -23,6 +22,7 @@ const config = {
   staticDirs: ['../assets'],
 
   async viteFinal(config) {
+    config.optimizeDeps.exclude = [...(config.optimizeDeps?.exclude ?? []), 'lit', 'lit-html']
     config.resolve.alias = {
       ...config.resolve.alias,
       '@sebastienbarbier/design-system': "../src",
@@ -30,6 +30,8 @@ const config = {
     return config;
   },
 
-  docs: {}
+  docs: {
+    autodocs: true,
+  }
 };
 export default config;

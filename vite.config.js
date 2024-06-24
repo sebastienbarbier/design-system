@@ -6,15 +6,19 @@ import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 export default defineConfig({
   build: {
+    target: 'modules',
     cssCodeSplit: false,
     lib: {
       // Could also be a dictionary or array of multiple entry points
       entry: [
         resolve(__dirname, 'src/index.ts'),
+        resolve(__dirname, 'src/components/badge/badge.ts'),
+        // resolve(__dirname, 'src/components/badge/badge.ts'),
       ],
+      formats: ['es'],
       name: '@sebastienbarbier/design-system',
       // the proper extensions will be added
-      fileName: 'index',
+      fileName: '[name]',
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
@@ -35,6 +39,18 @@ export default defineConfig({
       targets: [
         {
           src: 'src/fonts.css',
+          dest: ''
+        },
+        {
+          src: 'src/assets',
+          dest: ''
+        },
+        {
+          src: 'CHANGELOG.md',
+          dest: ''
+        },
+        {
+          src: 'README.md',
           dest: ''
         }
       ]

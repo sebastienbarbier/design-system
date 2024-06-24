@@ -20,6 +20,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog-emoji/master/CHANGELOG.md
 -->
+## [0.2.0] - 2024-06-24
+### ✨ Feature
+- Remove dist from SCSS @use path (#4)
+- Add Badge component (#6)
+### 🐛 Bug Fixes
+- List of CSS variables not working on Chrome and Safari (#5)
+
 ## [0.1.0] - 2024-06-17
 ### ✨ Feature
 - Publish @sebastienbarbier/design-system to npmjs (#3)

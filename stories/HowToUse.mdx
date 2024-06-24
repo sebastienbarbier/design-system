@@ -1,23 +1,31 @@
 import { Meta } from "@storybook/blocks";
+import fromJsToCssVar from './utils/fromJsToCssVar.js';
+
 import design from '@sebastienbarbier/design-system';
 
 <Meta title="How to use" />
 
+
 # How to use
 
-## Javascript 
+This design system is bundle as a npm package and can be used within your project as a javascript object or as a scss module.
 
-Install the npm package within your project
-```sh
+To add `@sebastienbarbier/design-system` package to your project, install it using the command:
+
+```zsh
 npm install @sebastienbarbier/design-system
 ```
 
-Full system can be accessed as object within your javascript file
+
+## Javascript 
+
+The  can be accessed as object within your javascript file
+
 ```jsx
-import design from '@sebastienbarbier/design-system';
+import myDesignSystem from '@sebastienbarbier/design-system';
 ```
 
-Design is a `json` object which contains the following keys:
+You can then access as a javascript object which contains the following keys:
 
 <code><pre style={{ fontSize: '0.8em' }}>
 { JSON.stringify(design, null, 2) }
@@ -27,7 +35,7 @@ Design is a `json` object which contains the following keys:
 
 Within you scss project, you can use the following SCSS line to load all variables.
 ```scss
-@use "@sebastienbarbier/design-system/dist/style";
+@use "@sebastienbarbier/design-system/style";
 
 .body {
     background: var(--sys-color-background);
@@ -37,9 +45,8 @@ Within you scss project, you can use the following SCSS line to load all variabl
 ### List of CSS variables
 
 {
-[...getComputedStyle(document.documentElement,null)]
+fromJsToCssVar(design)
     .filter(f => f.startsWith('--'))
-    .reverse()
     .map(f => <div key={f}>
         <strong>{f}</strong>: <em style={{ fontSize: '0.8em'}}>{ getComputedStyle(document.documentElement,null).getPropertyValue(f) }</em>
     </div>)

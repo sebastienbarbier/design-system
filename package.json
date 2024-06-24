@@ -1,19 +1,14 @@
 {
   "name": "@sebastienbarbier/design-system",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "sebastienbarbier design system package",
   "type": "module",
-  "main": "./dist/index.umd.cjs",
-  "module": "./dist/index.js",
-  "style": "./dist/index.css",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist",
-    "CHANGELOG.md",
-    "assets/fonts"
-  ],
+  "main": "./index.js",
+  "module": "./index.js",
+  "style": "./style.css",
+  "types": "./index.d.ts",
   "scripts": {
-    "build": "vite build",
+    "build": "vite build && cp package.json dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
@@ -36,20 +31,21 @@
   "homepage": "https://designsystem.sebastienbarbier.com",
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
-    "@storybook/addon-essentials": "^8.1.6",
-    "@storybook/addon-interactions": "^8.1.6",
-    "@storybook/addon-links": "^8.1.6",
-    "@storybook/addon-mdx-gfm": "^8.1.6",
-    "@storybook/blocks": "^8.1.6",
-    "@storybook/html": "^8.1.6",
-    "@storybook/html-vite": "^8.1.6",
-    "@storybook/test": "^8.1.6",
+    "@storybook/addon-essentials": "^8.1.10",
+    "@storybook/addon-interactions": "^8.1.10",
+    "@storybook/addon-links": "^8.1.10",
+    "@storybook/addon-mdx-gfm": "^8.1.10",
+    "@storybook/blocks": "^8.1.10",
+    "@storybook/html": "^8.1.10",
+    "@storybook/html-vite": "^8.1.10",
+    "@storybook/test": "^8.1.10",
     "sass": "^1.77.4",
-    "storybook": "^8.1.6",
+    "storybook": "^8.1.10",
     "vite-plugin-dts": "^3.9.1",
     "vite-plugin-static-copy": "^1.0.5"
   },
   "dependencies": {
+    "lit": "^3.1.4",
     "vite": "^5.2.13"
   }
 }
