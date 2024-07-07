@@ -1,5 +1,5 @@
 import { Meta } from "@storybook/blocks";
-import design from '@sebastienbarbier/design-system';
+import { json } from '@sebastienbarbier/design-system';
 import Palette from './components/Palette';
 
 <Meta title="Design System/Colors" />
@@ -10,17 +10,17 @@ This design system is based on a palette of colors that are used to create a con
 
 ## System
 
-<Palette large obj={design.sys.color} filter={(key) => { return true }} />
+<Palette large obj={json.sys.color} filter={(key) => { return true }} />
 
 ## References
 
-<Palette obj={design.ref.palette} filter={(key) => !key.startsWith('grey-') && !key.startsWith('brown-') && !key.startsWith('gold-')} />
+<Palette obj={json.ref.palette} filter={(key) => !key.startsWith('grey-') && !key.startsWith('brown-') && !key.startsWith('gold-')} />
 
 ### Gold
-<Palette obj={design.ref.palette} filter={(key) => key.startsWith('gold-')} />
+<Palette obj={json.ref.palette} filter={(key) => key.startsWith('gold-')} />
 
 ### Brown
-<Palette obj={design.ref.palette} filter={(key) => key.startsWith('brown-')} />
+<Palette obj={json.ref.palette} filter={(key) => key.startsWith('brown-')} />
 
 ### Grey
-<Palette obj={design.ref.palette} filter={(key) => key.startsWith('grey-')} />
+<Palette obj={json.ref.palette} filter={(key) => key.startsWith('grey-')} />

@@ -6,7 +6,9 @@ import * as sysTypeface from './tokens/sys-typeface.module.scss';
 
 import * as packageJSON from '../package.json';
 
-export default {
+import * as Badge from './components/badge/badge'; 
+
+export const json = {
     version: packageJSON.version,
     ref: {
         palette: refPalette.default,
@@ -18,7 +20,10 @@ export default {
     comp: {
         // TODO: add components 
     }
-}
+};
 
-// Expose all components
-// export * from './components/index';
+export { 
+    Badge
+};
+
+export default json;

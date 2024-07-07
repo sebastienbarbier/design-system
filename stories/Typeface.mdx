@@ -1,5 +1,5 @@
 import { Meta, Typeset } from "@storybook/blocks";
-import design from '@sebastienbarbier/design-system';
+import { json } from '@sebastienbarbier/design-system';
 
 import '@sebastienbarbier/design-system/fonts.css';
 
@@ -17,8 +17,8 @@ This system design defines **two typefaces**, one serif and one sans-serif.
 <Typeset
   fontSizes={[14, 16, 20, 24, 28, 32, 40]}
   fontWeight={700}
-  sampleText={design.sys.typeface.serif}
-  fontFamily={design.sys.typeface.serif}
+  sampleText={json.sys.typeface.serif}
+  fontFamily={json.sys.typeface.serif}
 />
 
 ## Sans-serif
@@ -29,8 +29,8 @@ This system design defines **two typefaces**, one serif and one sans-serif.
 <Typeset
   fontSizes={[14, 16, 20, 24, 28, 32, 40]}
   fontWeight={700}
-  sampleText={design.sys.typeface.sans}
-  fontFamily={design.sys.typeface.sans}
+  sampleText={json.sys.typeface.sans}
+  fontFamily={json.sys.typeface.sans}
 />
 
 ## Usage
@@ -41,17 +41,17 @@ The typefaces are defined as variables and can be used within your projects.
 ### Javascript
 
 ```js
-import design from '@sebastienbarbier/design-system';
+import { json } from '@sebastienbarbier/design-system';
 ```
 
-You can call `design.sys.typeface` to access the following values:
+You can call `json.sys.typeface` to access the following values:
 
 <div style={{ paddingBottom: '30px' }}>
 <code><pre style={{ fontSize: '0.8em' }}>
 {`
 ${JSON.stringify({
   sys: {
-    typeface: design.sys.typeface
+    typeface: json.sys.typeface
   }
 }, null, 2)}
 `}

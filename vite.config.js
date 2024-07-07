@@ -13,7 +13,6 @@ export default defineConfig({
       entry: [
         resolve(__dirname, 'src/index.ts'),
         resolve(__dirname, 'src/components/badge/badge.ts'),
-        // resolve(__dirname, 'src/components/badge/badge.ts'),
       ],
       formats: ['es'],
       name: '@sebastienbarbier/design-system',
@@ -33,8 +32,9 @@ export default defineConfig({
       },
     },
   },
+  optimizeDeps: {},
   plugins: [
-    dts(),
+    dts({ rollupTypes: true }),
     viteStaticCopy({
       targets: [
         {
@@ -51,6 +51,10 @@ export default defineConfig({
         },
         {
           src: 'README.md',
+          dest: ''
+        },
+        {
+          src: 'LICENSE',
           dest: ''
         }
       ]

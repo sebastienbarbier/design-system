@@ -20,6 +20,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog-emoji/master/CHANGELOG.md
 -->
+
+## [0.3.0] - 2024-MM-DD
+### 🛠 Improvements
+- Add prettier for code formatting (#11)
+- Add LICENCE to release (#12)
+- Update dependencies (#10)
+
 ## [0.2.0] - 2024-06-24
 ### ✨ Feature
 - Remove dist from SCSS @use path (#4)
