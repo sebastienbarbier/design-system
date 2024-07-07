@@ -1,10 +1,28 @@
-@use 'sass:list';
+@use "sass:list";
 
 @function values() {
   @return (
-    'serif-variable': ('"Source Serif Variable"', '"Source Serif"', 'Arial', 'serif'),
-    'sans-variable': ('"Open Sans Variable"', '"Open Sans"', 'Helvetica', 'sans-serif'),
-    'serif': ('"Source Serif"', 'Arial', 'serif'),
-    'sans': ('"Open Sans"', 'Helvetica', 'sans-serif'),
+    "serif-variable": (
+      '"Source Serif Variable"',
+      '"Source Serif"',
+      "Arial",
+      "serif",
+    ),
+    "sans-variable": (
+      '"Open Sans Variable"',
+      '"Open Sans"',
+      "Helvetica",
+      "sans-serif",
+    ),
+    "serif": (
+      '"Source Serif"',
+      "Arial",
+      "serif",
+    ),
+    "sans": (
+      '"Open Sans"',
+      "Helvetica",
+      "sans-serif",
+    )
   );
 }

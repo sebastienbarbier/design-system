@@ -4,9 +4,16 @@ const preview = {
   parameters: {
     options: {
       storySort: {
-        method: '',
-        order: ['Overview', 'Design System', ['How to use', 'Colors', 'Typefaces'], 'Components', 'About this library', ['Change log', 'License']],
-        locales: '',
+        method: "",
+        order: [
+          "Overview",
+          "Design System",
+          ["How to use", "Colors", "Typefaces"],
+          "Components",
+          "About this library",
+          ["Change log", "License"],
+        ],
+        locales: "",
       },
     },
     controls: {
@@ -17,7 +24,7 @@ const preview = {
     },
   },
 
-  tags: ['autodocs', 'autodocs']
+  tags: ["autodocs", "autodocs"],
 };
 
 export default preview;

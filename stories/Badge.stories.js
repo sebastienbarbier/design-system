@@ -1,21 +1,21 @@
-import '@sebastienbarbier/design-system/components/badge/badge';
+import "@sebastienbarbier/design-system/components/badge/badge";
 
 /**
  * The badge component can be used to display a list of key words or tags.
- * 
+ *
  * ## How to use
- * 
+ *
  * Register the `<sb-badge>` web component using following import
- * 
+ *
  * ```js
  * import '@sebastienbarbier/design-system/badge';
  * ```
- * 
+ *
  * Then simply use the `<sb-badge> ... </sb-badge>` tag to display a badge within your html
  *
  */
 export default {
-  title: 'Components/Badge',
+  title: "Components/Badge",
   tags: [],
   render: ({ label, ...args }) => {
     // You can either use a function to create DOM elements or use a plain html string!
@@ -24,7 +24,7 @@ export default {
     `;
   },
   argTypes: {
-    label: { control: 'text' },
+    label: { control: "text" },
   },
 };
 
@@ -32,9 +32,9 @@ export default {
  * Basic use of the badge component
  */
 export const Simple = {
-  name: 'Basic use',
+  name: "Basic use",
   args: {
-    label: 'This is a badge',
+    label: "This is a badge",
   },
 };
 
@@ -42,9 +42,9 @@ export const Simple = {
  * You need to use the `<sb-badge>` tag to display a badge within your html
  */
 export const List = {
-  name: 'List of badges',
+  name: "List of badges",
   args: {
-    label: 'This is a badge',
+    label: "This is a badge",
   },
   render: ({ label, ...args }) => {
     // You can either use a function to create DOM elements or use a plain html string!

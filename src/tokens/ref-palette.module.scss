@@ -3,12 +3,12 @@
 //   eg: https://coolors.co
 // Primary should be 60% of your UI, secondary 30% and tertiary 10%
 
-@use './ref-palette.scss' as refPalette;
+@use "./ref-palette.scss" as refPalette;
 
 :root {
-    @each $key, $value in refPalette.values() {
-      --ref-palette-#{$key}: #{$value};
-    }
+  @each $key, $value in refPalette.values() {
+    --ref-palette-#{$key}: #{$value};
+  }
 }
 
 :export {

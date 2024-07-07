@@ -1,18 +1,18 @@
 import { Meta, Typeset } from "@storybook/blocks";
-import { json } from '@sebastienbarbier/design-system';
+import { json } from "@sebastienbarbier/design-system";
 
-import '@sebastienbarbier/design-system/fonts.css';
+import "@sebastienbarbier/design-system/fonts.css";
 
 <Meta title="Design System/Typefaces" />
 
 # Typefaces
 
-This system design defines **two typefaces**, one serif and one sans-serif. 
+This system design defines **two typefaces**, one serif and one sans-serif.
 
 ## Serif
 
 **Font:** Source Serif  
-**Weights:** Variables, _100, 200, 300, 400, 500, 600, 700, 800, 900_  
+**Weights:** Variables, _100, 200, 300, 400, 500, 600, 700, 800, 900_
 
 <Typeset
   fontSizes={[14, 16, 20, 24, 28, 32, 40]}
@@ -24,7 +24,7 @@ This system design defines **two typefaces**, one serif and one sans-serif.
 ## Sans-serif
 
 **Font:** Open Sans  
-**Weights:** Variables, _100, 200, 300, 400, 500, 600, 700, 800, 900_  
+**Weights:** Variables, _100, 200, 300, 400, 500, 600, 700, 800, 900_
 
 <Typeset
   fontSizes={[14, 16, 20, 24, 28, 32, 40]}
@@ -35,27 +35,32 @@ This system design defines **two typefaces**, one serif and one sans-serif.
 
 ## Usage
 
-
 The typefaces are defined as variables and can be used within your projects.
 
 ### Javascript
 
 ```js
-import { json } from '@sebastienbarbier/design-system';
+import { json } from "@sebastienbarbier/design-system";
 ```
 
 You can call `json.sys.typeface` to access the following values:
 
-<div style={{ paddingBottom: '30px' }}>
-<code><pre style={{ fontSize: '0.8em' }}>
-{`
-${JSON.stringify({
-  sys: {
-    typeface: json.sys.typeface
-  }
-}, null, 2)}
+<div style={{ paddingBottom: "30px" }}>
+  <code>
+    <pre style={{ fontSize: "0.8em" }}>
+      {`
+${JSON.stringify(
+  {
+    sys: {
+      typeface: json.sys.typeface,
+    },
+  },
+  null,
+  2,
+)}
 `}
-</pre></code>
+    </pre>
+  </code>
 </div>
 
 ### CSS
@@ -63,14 +68,11 @@ ${JSON.stringify({
 Use the `var` function within your CSS/SCSS to access one of the following variables:
 
 ```css
---sys-typeface-serif-variable: "Source Serif Variable", "Source Serif", Arial, serif
---sys-typeface-sans-variable: "Open Sans Variable", "Open Sans", Helvetica, sans-serif
---sys-typeface-serif: "Source Serif", Arial, serif
---sys-typeface-sans: "Open Sans", Helvetica, sans-serif
+--sys-typeface-serif-variable: "Source Serif Variable", "Source Serif", Arial,
+  serif --sys-typeface-sans-variable: "Open Sans Variable", "Open Sans",
+  Helvetica, sans-serif --sys-typeface-serif: "Source Serif", Arial,
+  serif --sys-typeface-sans: "Open Sans", Helvetica, sans-serif;
 ```
-
-
-
 
 ## Add fonts reference within your projects
 

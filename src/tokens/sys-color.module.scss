@@ -3,13 +3,13 @@
 //   eg: https://coolors.co
 // Primary should be 60% of your UI, secondary 30% and tertiary 10%
 
-@use './sys-color.scss' as sysColor;
-@use './sys-typeface.scss' as sysTypeface;
+@use "./sys-color.scss" as sysColor;
+@use "./sys-typeface.scss" as sysTypeface;
 
 :root {
-    @each $key, $value in sysColor.values-light() {
-      --sys-color-#{$key}: #{$value};
-    }
+  @each $key, $value in sysColor.values-light() {
+    --sys-color-#{$key}: #{$value};
+  }
 }
 
 :export {

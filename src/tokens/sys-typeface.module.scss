@@ -1,9 +1,9 @@
-@use './sys-typeface.scss' as sysTypeface;
+@use "./sys-typeface.scss" as sysTypeface;
 
 :root {
-    @each $key, $value in sysTypeface.values() {
-      --sys-typeface-#{$key}: #{$value};
-    }
+  @each $key, $value in sysTypeface.values() {
+    --sys-typeface-#{$key}: #{$value};
+  }
 }
 
 :export {

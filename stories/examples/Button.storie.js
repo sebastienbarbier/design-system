@@ -1,9 +1,9 @@
-import { fn } from '@storybook/test';
-import { SimpleGreeting } from '../src/comp/SimpleGreeting/SimpleGreeting';
+import { fn } from "@storybook/test";
+import { SimpleGreeting } from "../src/comp/SimpleGreeting/SimpleGreeting";
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 export default {
-  title: 'Components/Simple Greeting',
-  tags: ['autodocs'],
+  title: "Components/Simple Greeting",
+  tags: ["autodocs"],
   render: ({ label, ...args }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
@@ -11,13 +11,13 @@ export default {
     // return createButton({ label, ...args });
   },
   argTypes: {
-    backgroundColor: { control: 'color' },
-    label: { control: 'text' },
-    onClick: { action: 'onClick' },
-    primary: { control: 'boolean' },
+    backgroundColor: { control: "color" },
+    label: { control: "text" },
+    onClick: { action: "onClick" },
+    primary: { control: "boolean" },
     size: {
-      control: { type: 'select' },
-      options: ['small', 'medium', 'large'],
+      control: { type: "select" },
+      options: ["small", "medium", "large"],
     },
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
@@ -28,26 +28,26 @@ export default {
 export const Primary = {
   args: {
     primary: true,
-    label: 'Button',
+    label: "Button",
   },
 };
 
 export const Secondary = {
   args: {
-    label: 'Button',
+    label: "Button",
   },
 };
 
 export const Large = {
   args: {
-    size: 'large',
-    label: 'Button',
+    size: "large",
+    label: "Button",
   },
 };
 
 export const Small = {
   args: {
-    size: 'small',
-    label: 'Button',
+    size: "small",
+    label: "Button",
   },
 };

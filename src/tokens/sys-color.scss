@@ -1,35 +1,30 @@
 // Use map.get to generate values-light and values-dark
-@use 'sass:map';
+@use "sass:map";
 
-@use './ref-palette.scss' as refPalette;
+@use "./ref-palette.scss" as refPalette;
 
 $_default-light: (
-  'ref-palette': refPalette.values(),
+  "ref-palette": refPalette.values(),
 );
 
 @function values-light($deps: $_default-light) {
   @return (
-     // background color
-    'background': map.get($deps, 'ref-palette', 'brown-2'),
-    'on-background': map.get($deps, 'ref-palette', 'black-variant'),
-
-     // cards color
-    'surface': map.get($deps, 'ref-palette', 'surface'),
-    'on-surface': map.get($deps, 'ref-palette', 'black-variant'),
-
+    // background color
+    "background": map.get($deps, "ref-palette", "brown-2"),
+    "on-background": map.get($deps, "ref-palette", "black-variant"),
+    // cards color
+    "surface": map.get($deps, "ref-palette", "surface"),
+    "on-surface": map.get($deps, "ref-palette", "black-variant"),
     // Brown
-    'primary': map.get($deps, 'ref-palette', 'grey-22'),
-    'on-primary': map.get($deps, 'ref-palette', 'white-variant'),
-
+    "primary": map.get($deps, "ref-palette", "grey-22"),
+    "on-primary": map.get($deps, "ref-palette", "white-variant"),
     // Gold
-    'secondary': map.get($deps, 'ref-palette', 'gold-17'),
-    'on-secondary': map.get($deps, 'ref-palette', 'gold-1'),
-
+    "secondary": map.get($deps, "ref-palette", "gold-17"),
+    "on-secondary": map.get($deps, "ref-palette", "gold-1"),
     // Gold ligher
-    'secondary-variant': map.get($deps, 'ref-palette', 'selected'),
-    'on-secondary-variant': map.get($deps, 'ref-palette', 'black-variant'),
-
-    'shadow': map.get($deps, 'ref-palette', 'eigengrau'),
+    "secondary-variant": map.get($deps, "ref-palette", "selected"),
+    "on-secondary-variant": map.get($deps, "ref-palette", "black-variant"),
+    "shadow": map.get($deps, "ref-palette", "eigengrau")
   );
 }
 
@@ -44,7 +39,7 @@ $_default-light: (
 //      // background color
 //     'background': map.get($deps, 'ref-palette', 'beige-7'),
 //     'on-background': map.get($deps, 'ref-palette', 'black-variant'),
-    
+
 //      // cards color
 //     'surface': map.get($deps, 'ref-palette', 'beige-11'),
 //     'on-surface': map.get($deps, 'ref-palette', 'black-variant'),

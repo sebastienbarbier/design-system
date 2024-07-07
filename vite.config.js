@@ -1,28 +1,28 @@
 // vite.config.js
-import { resolve } from 'path'
-import { defineConfig } from 'vite'
-import dts from 'vite-plugin-dts'
-import { viteStaticCopy } from 'vite-plugin-static-copy'
+import { resolve } from "path";
+import { defineConfig } from "vite";
+import dts from "vite-plugin-dts";
+import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
   build: {
-    target: 'modules',
+    target: "modules",
     cssCodeSplit: false,
     lib: {
       // Could also be a dictionary or array of multiple entry points
       entry: [
-        resolve(__dirname, 'src/index.ts'),
-        resolve(__dirname, 'src/components/badge/badge.ts'),
+        resolve(__dirname, "src/index.ts"),
+        resolve(__dirname, "src/components/badge/badge.ts"),
       ],
-      formats: ['es'],
-      name: '@sebastienbarbier/design-system',
+      formats: ["es"],
+      name: "@sebastienbarbier/design-system",
       // the proper extensions will be added
-      fileName: '[name]',
+      fileName: "[name]",
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library
-      external: [''],
+      external: [""],
       output: {
         // Provide global variables to use in the UMD build
         // for externalized deps
@@ -38,27 +38,27 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: 'src/fonts.css',
-          dest: ''
+          src: "src/fonts.css",
+          dest: "",
         },
         {
-          src: 'src/assets',
-          dest: ''
+          src: "src/assets",
+          dest: "",
         },
         {
-          src: 'CHANGELOG.md',
-          dest: ''
+          src: "CHANGELOG.md",
+          dest: "",
         },
         {
-          src: 'README.md',
-          dest: ''
+          src: "README.md",
+          dest: "",
         },
         {
-          src: 'LICENSE',
-          dest: ''
-        }
-      ]
-    })
-  ]
+          src: "LICENSE",
+          dest: "",
+        },
+      ],
+    }),
+  ],
   // publicDir: 'assets',
-})
+});

@@ -44,12 +44,13 @@ We welcome code contributions in the form of bug fixes, new features, or improve
 ```sh
 git clone https://github.com/sebastienbarbier/design-system.git
 ```
-    
+
 Create a new branch for your contribution:
 
 ```sh
 git checkout -b feature/my-feature
 ```
+
 Make your changes.
 
 ### Pull Request Process
@@ -57,9 +58,11 @@ Make your changes.
 1. Ensure your changes pass all tests and linting checks.
 2. Commit your changes with a clear and descriptive message.
 3. Push your changes to your fork:
+
 ```sh
 git push origin feature/my-feature
 ```
+
 4. Open a pull request on GitHub.
 5. Fill out the pull request template, providing as much detail as possible.
 6. Wait for a project maintainer to review your changes. Be responsive to any feedback or requests for changes.

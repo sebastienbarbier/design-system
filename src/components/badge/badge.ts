@@ -1,9 +1,9 @@
-import {html, css, LitElement} from 'lit';
-import {customElement } from 'lit/decorators.js';
+import { html, css, LitElement } from "lit";
+import { customElement } from "lit/decorators.js";
 
-import '../../index.scss';
+import "../../index.scss";
 
-@customElement('sb-badge')
+@customElement("sb-badge")
 export default class Badge extends LitElement {
   static styles = css`
     div.sb-badge {
@@ -16,10 +16,8 @@ export default class Badge extends LitElement {
       border-radius: 3px;
     }
   `;
-  
+
   render() {
-    return html`
-      <div class="sb-badge"><slot></slot></div>
-    `;
+    return html` <div class="sb-badge"><slot></slot></div> `;
   }
 }

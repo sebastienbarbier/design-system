@@ -1,5 +1,5 @@
 // Each module.scss file export within :root element CSS variables
 // which can be reused by other SCSS / CSS files.
-@use 'tokens/ref-palette.module.scss';
-@use 'tokens/sys-color.module.scss';
-@use 'tokens/sys-typeface.module.scss';
+@use "tokens/ref-palette.module.scss";
+@use "tokens/sys-color.module.scss";
+@use "tokens/sys-typeface.module.scss";

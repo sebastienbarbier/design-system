@@ -1,10 +1,9 @@
 import { Meta } from "@storybook/blocks";
-import fromJsToCssVar from './utils/fromJsToCssVar.js';
+import fromJsToCssVar from "./utils/fromJsToCssVar.js";
 
-import { json } from '@sebastienbarbier/design-system';
+import { json } from "@sebastienbarbier/design-system";
 
 <Meta title="How to use" />
-
 
 # How to use
 
@@ -16,29 +15,29 @@ To add `@sebastienbarbier/design-system` package to your project, install it usi
 npm install @sebastienbarbier/design-system
 ```
 
+## Javascript
 
-## Javascript 
-
-The  can be accessed as object within your javascript file
+The can be accessed as object within your javascript file
 
 ```jsx
-import { json } from '@sebastienbarbier/design-system';
+import { json } from "@sebastienbarbier/design-system";
 ```
 
 You can then access as a javascript object which contains the following keys:
 
-<code><pre style={{ fontSize: '0.8em' }}>
-{ JSON.stringify(json, null, 2) }
-</pre></code>
+<code>
+  <pre style={{ fontSize: "0.8em" }}>{JSON.stringify(json, null, 2)}</pre>
+</code>
 
 ## Within SCSS
 
 Within you scss project, you can use the following SCSS line to load all variables.
+
 ```scss
 @use "@sebastienbarbier/design-system/style";
 
 .body {
-    background: var(--sys-color-background);
+  background: var(--sys-color-background);
 }
 ```
 
@@ -46,8 +45,8 @@ Within you scss project, you can use the following SCSS line to load all variabl
 
 {
 fromJsToCssVar(json)
-    .filter(f => f.startsWith('--'))
-    .map(f => <div key={f}>
-        <strong>{f}</strong>: <em style={{ fontSize: '0.8em'}}>{ getComputedStyle(document.documentElement,null).getPropertyValue(f) }</em>
-    </div>)
+.filter(f => f.startsWith('--'))
+.map(f => <div key={f}>
+<strong>{f}</strong>: <em style={{ fontSize: '0.8em'}}>{ getComputedStyle(document.documentElement,null).getPropertyValue(f) }</em>
+</div>)
 }
