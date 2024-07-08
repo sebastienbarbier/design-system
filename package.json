@@ -8,7 +8,7 @@
   "style": "./style.css",
   "types": "./index.d.ts",
   "scripts": {
-    "build": "vite build && cp package.json dist",
+    "build": "vite build && cp CHANGELOG.md dist && cp LICENSE dist && cp README.md dist && cp package.json dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",

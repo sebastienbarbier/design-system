@@ -33,7 +33,9 @@ export default defineConfig({
   },
   optimizeDeps: {},
   plugins: [
-    dts({ rollupTypes: true }),
+    dts({
+      rollupTypes: true
+    }),
     viteStaticCopy({
       targets: [
         {
@@ -42,18 +44,6 @@ export default defineConfig({
         },
         {
           src: "src/assets",
-          dest: "",
-        },
-        {
-          src: "CHANGELOG.md",
-          dest: "",
-        },
-        {
-          src: "README.md",
-          dest: "",
-        },
-        {
-          src: "LICENSE",
           dest: "",
         },
       ],
