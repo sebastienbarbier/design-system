@@ -7,7 +7,6 @@ import { viteStaticCopy } from "vite-plugin-static-copy";
 export default defineConfig({
   build: {
     target: "modules",
-    cssCodeSplit: false,
     lib: {
       // Could also be a dictionary or array of multiple entry points
       entry: [
