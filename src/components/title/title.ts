@@ -21,11 +21,11 @@ export default class Title extends LitElement {
 
       span {
         display: block;
-        font-size: 0.2em;
+        font-size: 0.3em;
         font-weight: 400;
         text-transform: uppercase;
         opacity: 0.8;
-        top: -3.5em;
+        top: -2.5em;
         position: absolute;
         font-family: ${unsafeCSS(json.comp.title.headlineFontFamily)};
       }
@@ -40,6 +40,10 @@ export default class Title extends LitElement {
 
     h1.sb-title {
       font-size: ${unsafeCSS(json.comp.title.fontSizeH1)};
+      span {
+        font-size: 0.2em;
+        top: -3.5em;
+      }
     }
     h2.sb-title {
       font-size: ${unsafeCSS(json.comp.title.fontSizeH2)};
