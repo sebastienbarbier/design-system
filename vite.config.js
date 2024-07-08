@@ -34,7 +34,7 @@ export default defineConfig({
   optimizeDeps: {},
   plugins: [
     dts({
-      rollupTypes: true
+      rollupTypes: true,
     }),
     viteStaticCopy({
       targets: [
