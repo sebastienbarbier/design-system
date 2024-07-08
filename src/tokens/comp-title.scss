@@ -1,0 +1,38 @@
+@use "sass:map";
+
+@use "./sys-color.scss" as sysColor;
+@use "./sys-typeface.scss" as sysTypeface;
+
+$_default: (
+  "sys-color": sysColor.values(),
+  "sys-typeface": sysTypeface.values(),
+);
+
+$h1_size: 4.2em;
+$h2_size: $h1_size - 1.4em;
+$h3_size: $h2_size - 0.6em;
+$h4_size: $h3_size - 0.2em;
+$h5_size: $h4_size - 0.2em;
+$h6_size: $h5_size - 0.2em;
+
+@function values($deps: $_default) {
+  @return (
+    "color": map.get($deps, "sys-color", "on-surface"),
+    "fontFamily": map.get($deps, "sys-typeface", "serif-variable"),
+    "fontSizeH1": $h1_size,
+    "fontSizeH2": $h2_size,
+    "fontSizeH3": $h3_size,
+    "fontSizeH4": $h4_size,
+    "fontSizeH5": $h5_size,
+    "fontSizeH6": $h6_size,
+    "headlineColor": map.get($deps, "sys-color", "on-surface"),
+    "headlineFontFamily": map.get($deps, "sys-typeface", "sans-variable"),
+    "headlineFontSize": "0.8em",
+    "selectionBackgroundColor": map.get($deps, "sys-color", "secondary-variant"),
+    "selectionColor": map.get($deps, "sys-color", "on-secondary-variant")
+  );
+}
+
+@function headline($deps: $_default) {
+  @return ();
+}

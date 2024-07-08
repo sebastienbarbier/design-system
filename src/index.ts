@@ -3,10 +3,10 @@
 import * as refPalette from "./tokens/ref-palette.module.scss";
 import * as sysColor from "./tokens/sys-color.module.scss";
 import * as sysTypeface from "./tokens/sys-typeface.module.scss";
+import * as compBadge from "./tokens/comp-badge.module.scss";
+import * as compTitle from "./tokens/comp-title.module.scss";
 
 import * as packageJSON from "../package.json";
-
-import * as Badge from "./components/badge/badge";
 
 export const json = {
   version: packageJSON.version,
@@ -18,10 +18,9 @@ export const json = {
     typeface: sysTypeface.default,
   },
   comp: {
-    // TODO: add components
+    badge: compBadge.default,
+    title: compTitle.default,
   },
 };
-
-export { Badge };
 
 export default json;

@@ -1,0 +1,10 @@
+@use "./comp-title.scss" as compTitle;
+
+:export {
+  @each $key, $value in compTitle.values() {
+    #{$key}: #{$value};
+  }
+  @each $key, $value in compTitle.headline() {
+    headline-#{$key}: #{$value};
+  }
+}

@@ -1,7 +1,7 @@
-import { html, css, LitElement } from "lit";
+import { html, css, LitElement, unsafeCSS } from "lit";
 import { customElement } from "lit/decorators.js";
 
-import "../../index.scss";
+import { json } from "../../index";
 
 @customElement("sb-badge")
 export default class Badge extends LitElement {
@@ -9,10 +9,10 @@ export default class Badge extends LitElement {
     div.sb-badge {
       display: inline-block;
       padding: 4px 8px;
-      background: var(--sys-color-surface);
-      color: var(--sys-color-on-surface);
-      font-family: var(--sys-typeface-sans-variable);
-      font-size: 0.8em;
+      background: ${unsafeCSS(json.comp.badge.backgroundColor)};
+      color: ${unsafeCSS(json.comp.badge.color)};
+      font-family: ${unsafeCSS(json.comp.badge.fontFamily)};
+      font-size: ${unsafeCSS(json.comp.badge.fontSize)};
       border-radius: 3px;
     }
   `;

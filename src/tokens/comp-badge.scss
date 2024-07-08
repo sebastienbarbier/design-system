@@ -1,0 +1,18 @@
+@use "sass:map";
+
+@use "./sys-color.scss" as sysColor;
+@use "./sys-typeface.scss" as sysTypeface;
+
+$_default: (
+  "sys-color": sysColor.values(),
+  "sys-typeface": sysTypeface.values(),
+);
+
+@function values($deps: $_default) {
+  @return (
+    "backgroundColor": map.get($deps, "sys-color", "surface"),
+    "color": map.get($deps, "sys-color", "on-surface"),
+    "fontFamily": map.get($deps, "sys-typeface", "sans-variable"),
+    "fontSize": "0.8em"
+  );
+}

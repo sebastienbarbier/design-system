@@ -21,6 +21,8 @@ The can be accessed as object within your javascript file
 
 ```jsx
 import { json } from "@sebastienbarbier/design-system";
+// or
+import json from "@sebastienbarbier/design-system";
 ```
 
 You can then access as a javascript object which contains the following keys:
@@ -43,9 +45,14 @@ Within you scss project, you can use the following SCSS line to load all variabl
 
 ### List of CSS variables
 
+⚠️ To avoid having too many CSS variables, only palette and system values are injected within injected.
+
 {
 fromJsToCssVar(json)
+// Only keep CSS variables
 .filter(f => f.startsWith('--'))
+// Ignore components variables which are not exported as CSS variables
+.filter(f => !f.startsWith('--comp'))
 .map(f => <div key={f}>
 
 <strong>{f}</strong>: <em style={{ fontSize: '0.8em'}}>{ getComputedStyle(document.documentElement,null).getPropertyValue(f) }</em>
