@@ -6,15 +6,27 @@ import "@sebastienbarbier/design-system/baseline.scss";
  * ## How to use
  *
  * Titles are displayed using the `h1, h2, h3, h4, h5, and h6` elements and 
- * require to impor the baseline stylesheet.
+ * require to import the baseline stylesheet.
  *
  * ```scss
  * @use '@sebastienbarbier/design-system/baseline';
  * ```
- *
- * Then use directly the `H1` element to display a title within your html.
+ * 
+ * Size can be overiden using by changing CSS variables:
+ * 
+ * ```css
+ * :root {
+ *     --comp-title-fontSizeH1: 2.6em;
+ *     --comp-title-fontSizeH2: 2.0em;
+ *     --comp-title-fontSizeH3: 1.8em;
+ *     --comp-title-fontSizeH4: 1.6em;
+ *     --comp-title-fontSizeH5: 1.4em;
+ *     --comp-title-fontSizeH6: 1.2em;
+ * }
+ * ```
+ * 
+ * Simply use the `H1` element to display titles within your html. 
  * Headline can be added using the `<span>` tag.
- *
  */
 export default {
   title: "Components/Title",
@@ -41,7 +53,7 @@ export const Simple = {
   args: {
     headline: "Headline",
     title: "This is a title",
-  },
+  }
 };
 
 

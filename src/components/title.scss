@@ -51,79 +51,72 @@ h6 {
 
 // Responsive title on mobile
 
-$h1_size: var(--comp-title-fontSizeH1);
-$h2_size: var(--comp-title-fontSizeH2);
-$h3_size: var(--comp-title-fontSizeH3);
-$h4_size: var(--comp-title-fontSizeH4);
-$h5_size: var(--comp-title-fontSizeH5);
-$h6_size: var(--comp-title-fontSizeH6);
-
 h1 {
-  font-size: $h1_size;
+  font-size: var(--comp-title-fontSizeH1);
   span {
       font-size: 0.23em;
   }
 
   @include for-tablet-landscape-down {
-    font-size: calc($h1_size - 1em);
+    font-size: calc(var(--comp-title-fontSizeH1) - 1em);
   }
 
   @include for-phone-only {
-    font-size: calc($h1_size - 1.5em);
+    font-size: calc(var(--comp-title-fontSizeH1) - 1.5em);
   }
 }
 h2 {
-  font-size: $h2_size;
+  font-size: var(--comp-title-fontSizeH2);
 
   @include for-tablet-landscape-down {
-    font-size: calc($h2_size - 0.4em);
+    font-size: calc(var(--comp-title-fontSizeH2) - 0.4em);
   }
 
   @include for-phone-only {
-    font-size: calc($h2_size - 0.6em);
+    font-size: calc(var(--comp-title-fontSizeH2) - 0.6em);
   }
 }
 h3 {
-  font-size: $h3_size;
+  font-size: var(--comp-title-fontSizeH3);
 
   @include for-tablet-landscape-down {
-    font-size: calc($h3_size - 0.4em);
+    font-size: calc(var(--comp-title-fontSizeH3) - 0.4em);
   }
 
   @include for-phone-only {
-    font-size: calc($h3_size - 0.6em);
+    font-size: calc(var(--comp-title-fontSizeH3) - 0.6em);
   }
 }
 h4 {
-  font-size: $h4_size;
+  font-size: var(--comp-title-fontSizeH4);
 
   @include for-tablet-landscape-down {
-    font-size: calc($h4_size - 0.4em);
+    font-size: calc(var(--comp-title-fontSizeH4) - 0.4em);
   }
 
   @include for-phone-only {
-    font-size: calc($h4_size - 0.6em);
+    font-size: calc(var(--comp-title-fontSizeH4) - 0.6em);
   }
 }
 h5 {
-  font-size: $h5_size;
+  font-size: var(--comp-title-fontSizeH5);
 
   @include for-tablet-landscape-down {
-    font-size: calc($h5_size - 0.4em);
+    font-size: calc(var(--comp-title-fontSizeH5) - 0.4em);
   }
 
   @include for-phone-only {
-    font-size: calc($h5_size - 0.6em);
+    font-size: calc(var(--comp-title-fontSizeH5) - 0.6em);
   }
 }
 h6  {
-  font-size: $h6_size;
+  font-size: var(--comp-title-fontSizeH6);
 
   @include for-tablet-landscape-down {
-    font-size: calc($h6_size - 0.4em);
+    font-size: calc(var(--comp-title-fontSizeH6) - 0.4em);
   }
 
   @include for-phone-only {
-    font-size: calc($h6_size - 0.6em);
+    font-size: calc(var(--comp-title-fontSizeH6) - 0.6em);
   }
 }
