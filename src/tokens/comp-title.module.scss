@@ -1,5 +1,14 @@
 @use "./comp-title.scss" as compTitle;
 
+:root {
+  @each $key, $value in compTitle.values() {
+    --comp-title-#{$key}: #{$value};
+  }
+  @each $key, $value in compTitle.headline() {
+    --comp-title-headline-#{$key}: #{$value};
+  }
+}
+
 :export {
   @each $key, $value in compTitle.values() {
     #{$key}: #{$value};

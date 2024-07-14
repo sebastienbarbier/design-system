@@ -1,5 +1,11 @@
 @use "./comp-badge.scss" as compBadge;
 
+:root {
+  @each $key, $value in compBadge.values() {
+    --comp-badge-#{$key}: #{$value};
+  }
+}
+
 :export {
   @each $key, $value in compBadge.values() {
     #{$key}: #{$value};

@@ -1,0 +1,76 @@
+@use "../style.scss";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    font-variation-settings: "opsz" 24;
+    line-height: 1.2em;
+    padding: 4px 0px;
+    margin-top: 1.2em;
+    margin-bottom: 0.8em;
+    position: relative;
+    color: var(--comp-title-color);
+    font-family: var(--comp-title-font-family);
+    font-size: var(--comp-title-fontSizeH1);
+    border-radius: 3px;
+    position: relative;
+    
+    span {
+        display: inline;
+        position: absolute;
+        top: -1.1em;
+        font-size: 0.4em;
+        line-height: 1em;
+        font-weight: 400;
+        text-transform: uppercase;
+        opacity: 0.8;
+        padding-left: 2px;
+        padding-bottom: 0.4em; 
+        color: var(--comp-title-headline-color);
+        font-family: var(--comp-title-headline-font-family);
+    }
+
+    &.left {
+        text-align: left;
+    }
+
+    &.center {
+        text-align: center;
+    }
+
+    &.right {
+        text-align: right;
+    }
+}
+
+h1 {
+    font-size: var(--comp-title-fontSizeH1);
+
+    span {
+        font-size: 0.23em;
+    }
+} 
+
+h2 {
+    font-size: var(--comp-title-fontSizeH2);
+}
+
+h3 {
+    font-size: var(--comp-title-fontSizeH3);
+}
+
+h4 {
+    font-size: var(--comp-title-fontSizeH4);
+}
+
+h5 {
+    font-size: var(--comp-title-fontSizeH5);
+}
+
+h6 {
+    font-size: var(--comp-title-fontSizeH6);
+}

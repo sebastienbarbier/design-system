@@ -14,8 +14,6 @@ export default defineConfig({
         resolve(__dirname, "src/index.ts"),
         resolve(__dirname, "src/style.scss"),
         resolve(__dirname, "src/baseline.scss"),
-        resolve(__dirname, "src/components/badge/badge.ts"),
-        resolve(__dirname, "src/components/title/title.ts"),
       ],
       formats: ["es"],
       name: "@sebastienbarbier/design-system",

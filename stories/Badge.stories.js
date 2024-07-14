@@ -1,17 +1,17 @@
-import "@sebastienbarbier/design-system/components/badge/badge";
+import "@sebastienbarbier/design-system/baseline.scss";
 
 /**
  * The badge component can be used to display a list of key words or tags.
  *
  * ## How to use
  *
- * Register the `<sb-badge>` web component using following import
+ * Badges are displayed using the `.badge` class and required to import the baseline stylesheet.
  *
- * ```js
- * import '@sebastienbarbier/design-system/badge';
+ * ```scss
+ * @use '@sebastienbarbier/design-system/baseline';
  * ```
  *
- * Then simply use the `<sb-badge> ... </sb-badge>` tag to display a badge within your html
+ * Then use directly the `<p class="badge"> ... </p>` element to display a badge within your html
  *
  */
 export default {
@@ -20,7 +20,7 @@ export default {
   render: ({ label, ...args }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     return `
-      <sb-badge>${label}</sb-badge>
+      <p class="badge">${label}</p>
     `;
   },
   argTypes: {
@@ -39,7 +39,7 @@ export const Simple = {
 };
 
 /**
- * You need to use the `<sb-badge>` tag to display a badge within your html
+ * You need to use the `ul.badges` element to display a list of badge within your html
  */
 export const List = {
   name: "List of badges",
@@ -49,9 +49,46 @@ export const List = {
   render: ({ label, ...args }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     return `
-<sb-badge>HTML</sb-badge>
-<sb-badge>CSS</sb-badge>
-<sb-badge>Javascript</sb-badge>
+<ul class="badges">
+  <li>Pixel perfect integration</li>
+  <li>CSS Animation</li>
+  <li>Javascript</li>
+  <li>Typescript</li>
+  <li>React</li>
+  <li>Angular</li>
+  <li>Redux</li>
+  <li>IndexedDB</li>
+  <li>Web/Service workers</li>
+  <li>D3.js</li>
+  <li>Cypress</li>
+  <li>PWA</li>
+</ul>
+    `;
+  },
+};
+
+
+/**
+ * You need to use the `.right` class on `ul.badges` element to display a list of badge aligned to the right
+ */
+export const Right = {
+  name: "Align to the right",
+  render: ({ label, ...args }) => {
+    return `
+<ul class="badges right">
+  <li>Pixel perfect integration</li>
+  <li>CSS Animation</li>
+  <li>Javascript</li>
+  <li>Typescript</li>
+  <li>React</li>
+  <li>Angular</li>
+  <li>Redux</li>
+  <li>IndexedDB</li>
+  <li>Web/Service workers</li>
+  <li>D3.js</li>
+  <li>Cypress</li>
+  <li>PWA</li>
+</ul>
     `;
   },
 };

@@ -1,0 +1,30 @@
+@use "../style.scss";
+
+@mixin badge {
+    display: inline-block;
+    padding: 4px 8px;
+    background: var(--comp-badge-background-color);
+    color: var(--comp-badge-color);
+    font-family: var(--comp-badge-font-family);
+    font-size: var(--comp-badge-font-size);
+    border-radius: 3px;
+}
+  
+.badge {
+    @include badge;
+}
+
+ul.badges {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    li {
+        @include badge;
+    }
+
+    &.right {
+        justify-content: flex-end;
+    }
+}
