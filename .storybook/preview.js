@@ -7,8 +7,9 @@ const preview = {
         method: "",
         order: [
           "Overview",
+          "How to use",
           "Design System",
-          ["How to use", "Colors", "Typefaces"],
+          ["Baseline", "Colors", "Typefaces"],
           "Components",
           "About this library",
           ["Change log", "License"],

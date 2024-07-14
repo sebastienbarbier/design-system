@@ -1,0 +1,21 @@
+@use "tokens/ref-palette.module.scss";
+@use "tokens/sys-color.module.scss";
+@use "tokens/sys-typeface.module.scss";
+
+html {
+    body {
+        background: var(--sys-color-background);
+        font-family: var(--sys-typeface-sans-variable);
+        font-weight: 400;
+        font-variation-settings: "opsz" 24;
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--sys-typeface-serif-variable);
+        }
+
+        a {
+            color: var(--sys-color-secondary);
+            text-decoration: none;
+        }
+    }
+}

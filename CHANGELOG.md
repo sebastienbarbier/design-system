@@ -23,6 +23,7 @@ See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog
 
 ## [0.3.0] - 2024-MM-DD
 ### ✨ Feature
+- Define CSS Baseline for new document (#14) 
 - Add title component (#13)
 
 ### 🛠 Improvements

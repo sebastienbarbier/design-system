@@ -1,0 +1,23 @@
+import { Meta, Typeset } from "@storybook/blocks";
+import { json } from "@sebastienbarbier/design-system";
+
+<Meta title="Design System/Baseline" />
+
+# Baseline CSS
+
+A CSS baseline is provided defining the general styles for the design system.
+
+## How to use
+
+You can load the CSS baseline within your scss file using the following import statement:
+
+```scss
+@use "@sebastienbarbier/design-system/baseline";
+```
+
+
+An alternative solution is to inject directly the CSS baseline in your HTML file:
+
+```html
+<link rel="stylesheet" href="@sebastienbarbier/design-system/baseline.css">
+```
