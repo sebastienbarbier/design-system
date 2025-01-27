@@ -31,7 +31,11 @@ See for sample https://raw.githubusercontent.com/favoloso/conventional-changelog
 - Add LICENCE to release (#12)
 - Update dependencies (#10)
 
-## [0.2.0] - 2024-06-24
+## [0.2.1] - 2024-06-24
+### 🐛 Bug Fixes
+- Fix broken import (#8)
+
+## [0.2.0] - 2024-06-24 - Deprecated
 ### ✨ Feature
 - Remove dist from SCSS @use path (#4)
 - Add Badge component (#6)
