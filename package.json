@@ -11,7 +11,7 @@
     "build": "vite build && cp CHANGELOG.md dist && cp LICENSE dist && cp README.md dist && cp package.json dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "build-storybook": "export BUILD_STORYBOOK=true && storybook build",
     "format": "npx prettier --write ."
   },
   "repository": {
