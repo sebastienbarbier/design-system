@@ -58,11 +58,11 @@ h1 {
   }
 
   @include for-tablet-landscape-down {
-    font-size: calc(var(--comp-title-fontSizeH1) - 1em);
+    font-size: calc(var(--comp-title-fontSizeH1) - 0.4em);
   }
 
   @include for-phone-only {
-    font-size: calc(var(--comp-title-fontSizeH1) - 1.5em);
+    font-size: calc(var(--comp-title-fontSizeH1) - 0.6em);
   }
 }
 h2 {
